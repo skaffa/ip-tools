@@ -15,7 +15,7 @@ def request(self):
     
     print('\nMaking request from proxy ' + str(server))
 
-    headers["X-Real-IP"] = ""
+    #headers["X-Real-IP"] = ""
     #headers = {'Accept': '*/*', 'X-User-IP': '6.3.8.4'}
     try:
         print('Fetching results...')
