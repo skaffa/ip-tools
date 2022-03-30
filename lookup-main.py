@@ -44,7 +44,7 @@ def Refresher():
 
 
 gui.geometry("1920x1080")
-gui.title("Devkit - Database Manager")
+gui.title("Devkit - ip-tools")
 
 profiles = tk.Button(gui, text='Profiles', cursor="center_ptr", command=lambda:[profiles(), globalButtonColorReset()])
 profiles.grid(ipadx=1, ipady=1, columnspan=20, sticky="WE")
