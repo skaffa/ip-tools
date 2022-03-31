@@ -1,4 +1,3 @@
-#import tkinter as tk
 import requests
 import json
 import time
@@ -23,8 +22,17 @@ def request(self):
         x = requests.get(url, proxies=server, verify=True)
         array = x.text.split(',')
         print('\nShowing results for ' + self)
+        print("\n ==========================\n")
         for i in array:
-            print(i)
+            i = i.replace('\"', "")
+            i = i.replace(' :', ":")
+            i = i.replace(':', ": ")
+            i = i.replace('{', "")
+            i = i.replace('}', "")
+            i = i.replace('[', "")
+            i = i.replace(']', "")
+            print(" "+i+"\n")
+        print("\n ==========================\n")
     except:
         print('Error, couldn\'t fetch data')
 
