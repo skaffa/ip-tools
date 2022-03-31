@@ -38,13 +38,5 @@ request(destiny)
 
 
 
-#TODO#
-#
-# 
-#
-#Perhaps make function to scrape and use random proxy AND use first proxy from specified list AND use random proxy from specified list
-#
-#
-#
 # MADE BY SKAFFA
 # https://github.com/skaffa
