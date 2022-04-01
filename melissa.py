@@ -1,9 +1,8 @@
 import requests
-import json
 import time
 import random
 
-print('Starting melissa...')
+print(' Starting melissa...')
 
 def request(self):
 
@@ -15,14 +14,14 @@ def request(self):
     print('\nMaking request from proxy ' + str(server))
 
     #headers["X-Real-IP"] = ""
-    #headers = {'Accept': '*/*', 'X-User-IP': '6.3.8.4'}
+    headers = {'X-User-IP': '6.3.8.4'}
     try:
-        print('Fetching results...')
+        print('\n Fetching results...')
         url = 'https://www.melissa.com/v2/lookups/iplocation/ip/?ip=%s&site=&fmt=json&id='%self
         x = requests.get(url, proxies=server, verify=True)
         array = x.text.split(',')
         print('\nShowing results for ' + self)
-        print("\n ==========================\n")
+        print("\n==========================\n")
         for i in array:
             i = i.replace('\"', "")
             i = i.replace(' :', ":")
@@ -32,11 +31,11 @@ def request(self):
             i = i.replace('[', "")
             i = i.replace(']', "")
             print(" "+i+"\n")
-        print("\n ==========================\n")
+        print("\n==========================\n")
     except:
         print('Error, couldn\'t fetch data')
 
-destiny = input("\nEnter IP to check, leave empty to use own IP:\n>")
+destiny = input("\nEnter IP to check, leave empty to use own IP:\n >")
 if destiny == '':
     destiny = requests.get('https://ifconfig.me/ip').text
     print('No IP specified, using own IP')
