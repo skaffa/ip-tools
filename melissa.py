@@ -16,7 +16,7 @@ def request(self):
     #headers["X-Real-IP"] = ""
     headers = {'X-User-IP': '6.3.8.4'}
     try:
-        print('\n Fetching results...')
+        print('\nFetching results...')
         url = 'https://www.melissa.com/v2/lookups/iplocation/ip/?ip=%s&site=&fmt=json&id='%self
         x = requests.get(url, proxies=server, verify=True)
         array = x.text.split(',')
